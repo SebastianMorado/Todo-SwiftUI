@@ -11,6 +11,7 @@ struct SettingsView: View {
     //MARK: - Property
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var settingsManager : SettingsManager
+    @EnvironmentObject var todoManager : TodoManager
     
     //MARK: - Body
     var body: some View {
@@ -80,6 +81,18 @@ struct SettingsView: View {
                         }
                     }
                     
+                    Section {
+                        Toggle(isOn: $todoManager.hideCompletedItems) {
+                            Text("Hide completed tasks")
+                                .foregroundColor(todoManager.hideCompletedItems ? .primary : .gray)
+                        }
+                        .onChange(of: todoManager.hideCompletedItems) { value in
+                            todoManager.updateSettings(value: value)
+                        }
+                    } header: {
+                        Text("Settings")
+                    }
+                    
                     //MARK: - Section 3
                     
                     Section {
@@ -133,7 +146,9 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
+        let viewContext = PersistenceController.shared.container.viewContext
         SettingsView()
             .environmentObject(SettingsManager())
+            .environmentObject(TodoManager(context: viewContext))
     }
 }

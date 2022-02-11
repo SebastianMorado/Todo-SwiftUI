@@ -25,6 +25,7 @@
 		64B7A1D527B6A3BE001093E1 /* Green Light.png in Resources */ = {isa = PBXBuildFile; fileRef = 64B7A1CC27B6A3BE001093E1 /* Green Light.png */; };
 		64B7A1D627B6A3BE001093E1 /* Blue Light.png in Resources */ = {isa = PBXBuildFile; fileRef = 64B7A1CD27B6A3BE001093E1 /* Blue Light.png */; };
 		64B7A1D727B6A3BE001093E1 /* Green Dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 64B7A1CE27B6A3BE001093E1 /* Green Dark.png */; };
+		64B7A1DB27B6C742001093E1 /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B7A1DA27B6C742001093E1 /* CheckboxStyle.swift */; };
 		64EB9F3F27B2813600F4067C /* Todo_2_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EB9F3E27B2813600F4067C /* Todo_2_SwiftUIApp.swift */; };
 		64EB9F4327B2813700F4067C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64EB9F4227B2813700F4067C /* Assets.xcassets */; };
 		64EB9F4627B2813700F4067C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64EB9F4527B2813700F4067C /* Preview Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		64B7A1CD27B6A3BE001093E1 /* Blue Light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Blue Light.png"; sourceTree = "<group>"; };
 		64B7A1CE27B6A3BE001093E1 /* Green Dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Green Dark.png"; sourceTree = "<group>"; };
 		64B7A1D827B6A442001093E1 /* Todo-2-SwiftUI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Todo-2-SwiftUI-Info.plist"; sourceTree = SOURCE_ROOT; };
+		64B7A1DA27B6C742001093E1 /* CheckboxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxStyle.swift; sourceTree = "<group>"; };
 		64EB9F3B27B2813600F4067C /* Todo 2 SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo 2 SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64EB9F3E27B2813600F4067C /* Todo_2_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo_2_SwiftUIApp.swift; sourceTree = "<group>"; };
 		64EB9F4227B2813700F4067C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,6 +104,14 @@
 			path = Icons;
 			sourceTree = "<group>";
 		};
+		64B7A1D927B6C732001093E1 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				64B7A1DA27B6C742001093E1 /* CheckboxStyle.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
 		64EB9F3227B2813600F4067C = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +131,7 @@
 		64EB9F3D27B2813600F4067C /* Todo 2 SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				64B7A1D927B6C732001093E1 /* Style */,
 				64B7A1D827B6A442001093E1 /* Todo-2-SwiftUI-Info.plist */,
 				64B7A1C527B6A373001093E1 /* Icons */,
 				6436966E27B420BA003D38FF /* Extensions */,
@@ -284,6 +295,7 @@
 				64B7A1C427B69FE4001093E1 /* SettingsManager.swift in Sources */,
 				64EB9F5627B2818D00F4067C /* AddTodoView.swift in Sources */,
 				64B7A1B827B65835001093E1 /* HelperFunctions.swift in Sources */,
+				64B7A1DB27B6C742001093E1 /* CheckboxStyle.swift in Sources */,
 				64B7A1BE27B67567001093E1 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

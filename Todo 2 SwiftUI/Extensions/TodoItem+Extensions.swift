@@ -16,4 +16,12 @@ extension TodoItem: BaseModel {
         request.sortDescriptors = [dateSort]
         return request
     }
+    
+    static var notCompleted: NSFetchRequest<TodoItem> {
+        let request = TodoItem.fetchRequest()
+        let dateSort = NSSortDescriptor(key:"timestamp", ascending:true)
+        request.predicate = NSPredicate(format: "isCompleted == false")
+        request.sortDescriptors = [dateSort]
+        return request
+    }
 }

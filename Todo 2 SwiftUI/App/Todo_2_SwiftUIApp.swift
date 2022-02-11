@@ -14,8 +14,9 @@ struct Todo_2_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
             let settingsManager = SettingsManager()
-            MainView(todoManager: TodoManager(context: persistenceController.container.viewContext))
+            MainView()
                 .environmentObject(settingsManager)
+                .environmentObject(TodoManager(context: persistenceController.container.viewContext))
         }
     }
 }

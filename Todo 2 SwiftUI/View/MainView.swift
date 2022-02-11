@@ -9,14 +9,14 @@ import SwiftUI
 
 struct MainView: View {
     //MARK: - property
-    @ObservedObject var todoManager : TodoManager
     @EnvironmentObject var settingsManager : SettingsManager
+    @EnvironmentObject var todoManager : TodoManager
     @State private var isShowingAddTodoView : Bool = false
     @State private var isShowingSettingsView : Bool = false
+    @State private var showEmptyListView : Bool = false
     
-    init(todoManager: TodoManager) {
+    init() {
         UITextView.appearance().backgroundColor = .clear
-        self.todoManager = todoManager
     }
     
     
@@ -26,27 +26,29 @@ struct MainView: View {
             ZStack {
                 List() {
                     ForEach($todoManager.todoItems) {$item in
-                        HStack{
-                            TextEditor(text: $item.name ?? "No Name")
-                            .onChange(of: item.name, perform: { newValue in
-                                todoManager.updateItem(todo: item)
-                            })
-                            .font(.system(size: 20, weight: .semibold, design: .default))
-                            .multilineTextAlignment(.leading)
-                            .lineLimit(nil)
-                            Text(item.priority!)
-                                .font(.footnote)
-                                .fontWeight(.bold)
-                                .foregroundColor(Color(uiColor: UIColor.secondarySystemBackground))
-                                .padding(3)
-                                .frame(minWidth: 62)
-                                .background(
-                                    Capsule()
-                                        .fill(settingsManager.colorize(priority: item.priority))
-                                )
+                        if !item.isCompleted || !todoManager.hideCompletedItems {
+                            HStack{
+                                Toggle("", isOn: $item.isCompleted)
+                                    .toggleStyle(CheckboxStyle())
+                                    .onReceive(item.objectWillChange) { _ in
+                                        todoManager.updateItem(todo: item)
+                                    }
+                                TextEditor(text: $item.name ?? "No Name")
+                                .onChange(of: item.name, perform: { newValue in
+                                    todoManager.updateItem(todo: item)
+                                })
+                                .font(.system(size: 20, weight: .semibold, design: .default))
+                                .multilineTextAlignment(.leading)
+                                .lineLimit(nil)
+                                
+                                Circle()
+                                    .fill(settingsManager.colorize(priority: item.priority))
+                                    .frame(width: 15, height: 15, alignment: .center)
+                                
+                            }
                             
                         }
-                        .padding(.horizontal)
+                        
                     }
                     .onDelete { offsets in
                         todoManager.deleteItem(at: offsets)
@@ -70,7 +72,7 @@ struct MainView: View {
                 }
                 
                 //MARK: - No Todo Items
-                if todoManager.todoItems.count == 0 {
+                if todoManager.todoItems.count == 0 || (todoManager.areAllItemsCompleted && todoManager.hideCompletedItems) {
                     EmptyListView()
                 }
                 
@@ -114,7 +116,6 @@ struct MainView: View {
         .alert("Error", isPresented: $todoManager.isError, actions: {}, message: {
             Text(todoManager.errorMessage)
         })
-        .environmentObject(todoManager)
         .navigationViewStyle(StackNavigationViewStyle())
     }
 }
@@ -122,7 +123,8 @@ struct MainView: View {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         let viewContext = PersistenceController.shared.container.viewContext
-        MainView(todoManager: TodoManager(context: viewContext))
+        MainView()
             .environmentObject(SettingsManager())
+            .environmentObject(TodoManager(context: viewContext))
     }
 }

@@ -13,16 +13,21 @@ class TodoManager: NSObject, ObservableObject {
     private (set) var context: NSManagedObjectContext
     //For storing and displaying
     @Published var todoItems : [TodoItem] = [TodoItem]()
-    private let fetchedResultsController: NSFetchedResultsController<TodoItem>
+    @Published private var fetchedResultsController: NSFetchedResultsController<TodoItem>
     @Published var isError : Bool = false
     @Published var errorMessage : String = ""
+    @Published var hideCompletedItems : Bool
+    @Published var areAllItemsCompleted : Bool = false
     
     //Initialize
     init (context: NSManagedObjectContext) {
         self.context = context
+        hideCompletedItems = UserDefaults.standard.bool(forKey: "hideCompletedItems")
         fetchedResultsController = NSFetchedResultsController(fetchRequest: TodoItem.all, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         super.init()
         fetchedResultsController.delegate = self
+        
+        
         
         do {
             try fetchedResultsController.performFetch()
@@ -30,6 +35,9 @@ class TodoManager: NSObject, ObservableObject {
                 return
             }
             self.todoItems = todoItems
+            if todoItems.filter({ (item) in item.isCompleted == false}).isEmpty {
+                areAllItemsCompleted = true
+            }
             
         } catch {
             presentError(errorDesc: error.localizedDescription)
@@ -48,8 +56,10 @@ class TodoManager: NSObject, ObservableObject {
             todo.priority = priority
             todo.id = UUID()
             todo.timestamp = Date()
+            todo.isCompleted = false
             try todo.save()
             clearFields()
+            areAllItemsCompleted = false
         } catch {
             presentError(errorDesc: error.localizedDescription)
         }
@@ -81,11 +91,23 @@ class TodoManager: NSObject, ObservableObject {
     }
     
     func updateItem(todo: TodoItem) {
-        print("UPDATING")
         do {
             try todo.save()
+            checkIfAllItemsAreCompleted()
         } catch {
             presentError(errorDesc: error.localizedDescription)
+        }
+    }
+    
+    func updateSettings(value: Bool) {
+        UserDefaults.standard.set(value, forKey: "hideCompletedItems")
+    }
+    
+    private func checkIfAllItemsAreCompleted() {
+        if todoItems.filter({ (item) in item.isCompleted == false}).isEmpty {
+            areAllItemsCompleted = true
+        } else {
+            areAllItemsCompleted = false
         }
     }
     
