@@ -10,11 +10,12 @@ import SwiftUI
 @main
 struct Todo_2_SwiftUIApp: App {
     let persistenceController = PersistenceController.shared
-
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            let settingsManager = SettingsManager()
+            MainView(todoManager: TodoManager(context: persistenceController.container.viewContext))
+                .environmentObject(settingsManager)
         }
     }
 }

@@ -7,22 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6436967027B420CB003D38FF /* TodoItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6436966F27B420CB003D38FF /* TodoItem+Extensions.swift */; };
+		6436967227B42102003D38FF /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6436967127B42102003D38FF /* BaseModel.swift */; };
+		64B7A1B827B65835001093E1 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B7A1B727B65835001093E1 /* HelperFunctions.swift */; };
+		64B7A1BA27B65E07001093E1 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64B7A1B927B65E07001093E1 /* Launch Screen.storyboard */; };
+		64B7A1BC27B65EDD001093E1 /* EmptyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B7A1BB27B65EDD001093E1 /* EmptyListView.swift */; };
+		64B7A1BE27B67567001093E1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B7A1BD27B67567001093E1 /* SettingsView.swift */; };
+		64B7A1C027B67A0C001093E1 /* FormRowStaticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B7A1BF27B67A0C001093E1 /* FormRowStaticView.swift */; };
+		64B7A1C227B69EB5001093E1 /* FormRowLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B7A1C127B69EB5001093E1 /* FormRowLinkView.swift */; };
+		64B7A1C427B69FE4001093E1 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B7A1C327B69FE4001093E1 /* SettingsManager.swift */; };
+		64B7A1CF27B6A3BE001093E1 /* Blue Dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 64B7A1C627B6A3BE001093E1 /* Blue Dark.png */; };
+		64B7A1D027B6A3BE001093E1 /* Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 64B7A1C727B6A3BE001093E1 /* Blue.png */; };
+		64B7A1D127B6A3BE001093E1 /* Green.png in Resources */ = {isa = PBXBuildFile; fileRef = 64B7A1C827B6A3BE001093E1 /* Green.png */; };
+		64B7A1D227B6A3BE001093E1 /* Pink Light.png in Resources */ = {isa = PBXBuildFile; fileRef = 64B7A1C927B6A3BE001093E1 /* Pink Light.png */; };
+		64B7A1D327B6A3BE001093E1 /* Pink.png in Resources */ = {isa = PBXBuildFile; fileRef = 64B7A1CA27B6A3BE001093E1 /* Pink.png */; };
+		64B7A1D427B6A3BE001093E1 /* Pink Dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 64B7A1CB27B6A3BE001093E1 /* Pink Dark.png */; };
+		64B7A1D527B6A3BE001093E1 /* Green Light.png in Resources */ = {isa = PBXBuildFile; fileRef = 64B7A1CC27B6A3BE001093E1 /* Green Light.png */; };
+		64B7A1D627B6A3BE001093E1 /* Blue Light.png in Resources */ = {isa = PBXBuildFile; fileRef = 64B7A1CD27B6A3BE001093E1 /* Blue Light.png */; };
+		64B7A1D727B6A3BE001093E1 /* Green Dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 64B7A1CE27B6A3BE001093E1 /* Green Dark.png */; };
 		64EB9F3F27B2813600F4067C /* Todo_2_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EB9F3E27B2813600F4067C /* Todo_2_SwiftUIApp.swift */; };
-		64EB9F4127B2813600F4067C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EB9F4027B2813600F4067C /* ContentView.swift */; };
 		64EB9F4327B2813700F4067C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64EB9F4227B2813700F4067C /* Assets.xcassets */; };
 		64EB9F4627B2813700F4067C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64EB9F4527B2813700F4067C /* Preview Assets.xcassets */; };
 		64EB9F4827B2813700F4067C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EB9F4727B2813700F4067C /* Persistence.swift */; };
 		64EB9F4B27B2813700F4067C /* Todo_2_SwiftUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 64EB9F4927B2813700F4067C /* Todo_2_SwiftUI.xcdatamodeld */; };
+		64EB9F5627B2818D00F4067C /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EB9F5527B2818D00F4067C /* AddTodoView.swift */; };
+		64EB9F5927B2835500F4067C /* TodoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EB9F5827B2835500F4067C /* TodoManager.swift */; };
+		64EB9F5D27B299CF00F4067C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EB9F5C27B299CF00F4067C /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6436966F27B420CB003D38FF /* TodoItem+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoItem+Extensions.swift"; sourceTree = "<group>"; };
+		6436967127B42102003D38FF /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		64B7A1B727B65835001093E1 /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
+		64B7A1B927B65E07001093E1 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		64B7A1BB27B65EDD001093E1 /* EmptyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListView.swift; sourceTree = "<group>"; };
+		64B7A1BD27B67567001093E1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		64B7A1BF27B67A0C001093E1 /* FormRowStaticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRowStaticView.swift; sourceTree = "<group>"; };
+		64B7A1C127B69EB5001093E1 /* FormRowLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRowLinkView.swift; sourceTree = "<group>"; };
+		64B7A1C327B69FE4001093E1 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		64B7A1C627B6A3BE001093E1 /* Blue Dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Blue Dark.png"; sourceTree = "<group>"; };
+		64B7A1C727B6A3BE001093E1 /* Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blue.png; sourceTree = "<group>"; };
+		64B7A1C827B6A3BE001093E1 /* Green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Green.png; sourceTree = "<group>"; };
+		64B7A1C927B6A3BE001093E1 /* Pink Light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pink Light.png"; sourceTree = "<group>"; };
+		64B7A1CA27B6A3BE001093E1 /* Pink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pink.png; sourceTree = "<group>"; };
+		64B7A1CB27B6A3BE001093E1 /* Pink Dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pink Dark.png"; sourceTree = "<group>"; };
+		64B7A1CC27B6A3BE001093E1 /* Green Light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Green Light.png"; sourceTree = "<group>"; };
+		64B7A1CD27B6A3BE001093E1 /* Blue Light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Blue Light.png"; sourceTree = "<group>"; };
+		64B7A1CE27B6A3BE001093E1 /* Green Dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Green Dark.png"; sourceTree = "<group>"; };
+		64B7A1D827B6A442001093E1 /* Todo-2-SwiftUI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Todo-2-SwiftUI-Info.plist"; sourceTree = SOURCE_ROOT; };
 		64EB9F3B27B2813600F4067C /* Todo 2 SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo 2 SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64EB9F3E27B2813600F4067C /* Todo_2_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo_2_SwiftUIApp.swift; sourceTree = "<group>"; };
-		64EB9F4027B2813600F4067C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		64EB9F4227B2813700F4067C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64EB9F4527B2813700F4067C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		64EB9F4727B2813700F4067C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		64EB9F4A27B2813700F4067C /* Todo_2_SwiftUI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Todo_2_SwiftUI.xcdatamodel; sourceTree = "<group>"; };
+		64EB9F5527B2818D00F4067C /* AddTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
+		64EB9F5827B2835500F4067C /* TodoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoManager.swift; sourceTree = "<group>"; };
+		64EB9F5C27B299CF00F4067C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +77,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6436966E27B420BA003D38FF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6436966F27B420CB003D38FF /* TodoItem+Extensions.swift */,
+				6436967127B42102003D38FF /* BaseModel.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		64B7A1C527B6A373001093E1 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				64B7A1C627B6A3BE001093E1 /* Blue Dark.png */,
+				64B7A1CD27B6A3BE001093E1 /* Blue Light.png */,
+				64B7A1C727B6A3BE001093E1 /* Blue.png */,
+				64B7A1CE27B6A3BE001093E1 /* Green Dark.png */,
+				64B7A1CC27B6A3BE001093E1 /* Green Light.png */,
+				64B7A1C827B6A3BE001093E1 /* Green.png */,
+				64B7A1CB27B6A3BE001093E1 /* Pink Dark.png */,
+				64B7A1C927B6A3BE001093E1 /* Pink Light.png */,
+				64B7A1CA27B6A3BE001093E1 /* Pink.png */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
 		64EB9F3227B2813600F4067C = {
 			isa = PBXGroup;
 			children = (
@@ -55,12 +121,17 @@
 		64EB9F3D27B2813600F4067C /* Todo 2 SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				64EB9F3E27B2813600F4067C /* Todo_2_SwiftUIApp.swift */,
-				64EB9F4027B2813600F4067C /* ContentView.swift */,
+				64B7A1D827B6A442001093E1 /* Todo-2-SwiftUI-Info.plist */,
+				64B7A1C527B6A373001093E1 /* Icons */,
+				6436966E27B420BA003D38FF /* Extensions */,
+				64EB9F5727B2833E00F4067C /* ViewModel */,
+				64EB9F5427B2814C00F4067C /* Utility */,
+				64EB9F5327B2814800F4067C /* View */,
+				64EB9F5227B2814400F4067C /* App */,
+				64EB9F5127B2814000F4067C /* Model */,
 				64EB9F4227B2813700F4067C /* Assets.xcassets */,
-				64EB9F4727B2813700F4067C /* Persistence.swift */,
-				64EB9F4927B2813700F4067C /* Todo_2_SwiftUI.xcdatamodeld */,
 				64EB9F4427B2813700F4067C /* Preview Content */,
+				64B7A1B927B65E07001093E1 /* Launch Screen.storyboard */,
 			);
 			path = "Todo 2 SwiftUI";
 			sourceTree = "<group>";
@@ -71,6 +142,53 @@
 				64EB9F4527B2813700F4067C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		64EB9F5127B2814000F4067C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				64EB9F4727B2813700F4067C /* Persistence.swift */,
+				64EB9F4927B2813700F4067C /* Todo_2_SwiftUI.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		64EB9F5227B2814400F4067C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				64EB9F3E27B2813600F4067C /* Todo_2_SwiftUIApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		64EB9F5327B2814800F4067C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				64EB9F5527B2818D00F4067C /* AddTodoView.swift */,
+				64EB9F5C27B299CF00F4067C /* MainView.swift */,
+				64B7A1BB27B65EDD001093E1 /* EmptyListView.swift */,
+				64B7A1BD27B67567001093E1 /* SettingsView.swift */,
+				64B7A1BF27B67A0C001093E1 /* FormRowStaticView.swift */,
+				64B7A1C127B69EB5001093E1 /* FormRowLinkView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		64EB9F5427B2814C00F4067C /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				64B7A1B727B65835001093E1 /* HelperFunctions.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		64EB9F5727B2833E00F4067C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				64EB9F5827B2835500F4067C /* TodoManager.swift */,
+				64B7A1C327B69FE4001093E1 /* SettingsManager.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,8 +249,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64B7A1D727B6A3BE001093E1 /* Green Dark.png in Resources */,
+				64B7A1BA27B65E07001093E1 /* Launch Screen.storyboard in Resources */,
+				64B7A1D127B6A3BE001093E1 /* Green.png in Resources */,
 				64EB9F4627B2813700F4067C /* Preview Assets.xcassets in Resources */,
+				64B7A1D427B6A3BE001093E1 /* Pink Dark.png in Resources */,
+				64B7A1D027B6A3BE001093E1 /* Blue.png in Resources */,
+				64B7A1CF27B6A3BE001093E1 /* Blue Dark.png in Resources */,
+				64B7A1D327B6A3BE001093E1 /* Pink.png in Resources */,
 				64EB9F4327B2813700F4067C /* Assets.xcassets in Resources */,
+				64B7A1D627B6A3BE001093E1 /* Blue Light.png in Resources */,
+				64B7A1D227B6A3BE001093E1 /* Pink Light.png in Resources */,
+				64B7A1D527B6A3BE001093E1 /* Green Light.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,10 +271,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64EB9F5D27B299CF00F4067C /* MainView.swift in Sources */,
+				64B7A1C027B67A0C001093E1 /* FormRowStaticView.swift in Sources */,
 				64EB9F4B27B2813700F4067C /* Todo_2_SwiftUI.xcdatamodeld in Sources */,
+				6436967027B420CB003D38FF /* TodoItem+Extensions.swift in Sources */,
+				64B7A1C227B69EB5001093E1 /* FormRowLinkView.swift in Sources */,
+				64EB9F5927B2835500F4067C /* TodoManager.swift in Sources */,
+				64B7A1BC27B65EDD001093E1 /* EmptyListView.swift in Sources */,
 				64EB9F4827B2813700F4067C /* Persistence.swift in Sources */,
-				64EB9F4127B2813600F4067C /* ContentView.swift in Sources */,
 				64EB9F3F27B2813600F4067C /* Todo_2_SwiftUIApp.swift in Sources */,
+				6436967227B42102003D38FF /* BaseModel.swift in Sources */,
+				64B7A1C427B69FE4001093E1 /* SettingsManager.swift in Sources */,
+				64EB9F5627B2818D00F4067C /* AddTodoView.swift in Sources */,
+				64B7A1B827B65835001093E1 /* HelperFunctions.swift in Sources */,
+				64B7A1BE27B67567001093E1 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,11 +418,14 @@
 				DEVELOPMENT_TEAM = 453J5S23QT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Todo-2-SwiftUI-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,11 +450,14 @@
 				DEVELOPMENT_TEAM = 453J5S23QT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Todo-2-SwiftUI-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
