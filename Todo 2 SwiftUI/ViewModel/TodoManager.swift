@@ -66,17 +66,14 @@ class TodoManager: NSObject, ObservableObject {
     }
     
     func deleteItem(at offsets: IndexSet) {
-        DispatchQueue.main.async {
-            offsets.forEach { index in
-                let item = self.todoItems[index]
-                do {
-                    try item.delete()
-                } catch {
-                    self.presentError(errorDesc: error.localizedDescription)
-                }
+        offsets.forEach { index in
+            let item = self.todoItems[index]
+            do {
+                try item.delete()
+            } catch {
+                self.presentError(errorDesc: error.localizedDescription)
             }
         }
-        
     }
     
     func clearFields() {
@@ -91,12 +88,15 @@ class TodoManager: NSObject, ObservableObject {
     }
     
     func updateItem(todo: TodoItem) {
-        do {
-            try todo.save()
-            checkIfAllItemsAreCompleted()
-        } catch {
-            presentError(errorDesc: error.localizedDescription)
+        if let _ = todo.name {
+            do {
+                try todo.save()
+                checkIfAllItemsAreCompleted()
+            } catch {
+                self.presentError(errorDesc: error.localizedDescription)
+            }
         }
+        
     }
     
     func updateSettings(value: Bool) {

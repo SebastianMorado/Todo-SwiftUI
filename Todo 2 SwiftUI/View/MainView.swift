@@ -30,16 +30,16 @@ struct MainView: View {
                             HStack{
                                 Toggle("", isOn: $item.isCompleted)
                                     .toggleStyle(CheckboxStyle())
-                                    .onReceive(item.objectWillChange) { _ in
+                                    .onReceive(item.objectWillChange) { value in
                                         todoManager.updateItem(todo: item)
                                     }
                                 TextEditor(text: $item.name ?? "No Name")
-                                .onChange(of: item.name, perform: { newValue in
-                                    todoManager.updateItem(todo: item)
-                                })
-                                .font(.system(size: 20, weight: .semibold, design: .default))
-                                .multilineTextAlignment(.leading)
-                                .lineLimit(nil)
+                                    .onChange(of: item.name, perform: { newValue in
+                                        todoManager.updateItem(todo: item)
+                                    })
+                                    .font(.system(size: 20, weight: .semibold, design: .default))
+                                    .multilineTextAlignment(.leading)
+                                    .lineLimit(nil)
                                 
                                 Circle()
                                     .fill(settingsManager.colorize(priority: item.priority))
